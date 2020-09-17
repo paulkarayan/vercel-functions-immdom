@@ -1,5 +1,5 @@
 {
-  "env": {},
+  "env": {"GITHUB_ACCESS_TOKEN": "@github_access_token"},
   "functions": {
     "api/js/files.js": {
       "includeFiles": "_files/**"
