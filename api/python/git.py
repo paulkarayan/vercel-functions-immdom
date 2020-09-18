@@ -11,7 +11,10 @@ class handler(BaseHTTPRequestHandler):
         self.end_headers()
         print(parse_qs(self.path[2:]))
 
-        user = parse_qs(self.path[2:]).get('username', 'paulkarayan')
+        user = parse_qs(self.path[2:]).get('pi/python/git?username', 'paulkarayan')
+        if user != "paulkarayan":
+            user = user[0]
+        print(user)
         GITHUB_ACCESS_TOKEN = os.environ.get('GITHUB_ACCESS_TOKEN')
 
         url = "https://api.github.com/users/{user}".format(user=user)
