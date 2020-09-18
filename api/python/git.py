@@ -21,5 +21,5 @@ class handler(BaseHTTPRequestHandler):
                 }
         r = requests.get(url, headers=headers)
 
-        self.wfile.write(r.text().encode())
+        self.wfile.write(r.text.encode())
         return
