@@ -43,6 +43,13 @@ export default function Home() {
             </p>
           </a>
 
+          <a href="/api/python/git?username=paulkarayan" className={styles.card}>
+            <h3>Python - requests example &rarr;</h3>
+            <p>
+              Use this to lookup github user details by setting the username param.
+            </p>
+          </a>
+
           <a href="/api/python/param?basicThing=Prada" className={styles.card}>
             <h3>Python - WSGI example using Flask &rarr;</h3>
             <p>
