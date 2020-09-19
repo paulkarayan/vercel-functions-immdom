@@ -3,27 +3,28 @@
 Check the examples out at:
 [functions.immdom.com](functions.immdom.com)
 
-to run the dainty webapp that will point you to the examples:
-
-`yarn dev`
-
 you can also fork this repo and set it up with Vercel.
-
 _REMEMBER: These functions ain't gonna work unless you push 'em up to Vercel!_
 
-## Basics
+## basics
+
+### Read The F!cking Manual
+You should read the (https://vercel.com/docs/serverless-functions/introduction)[Vercel general introduction]
+before proceeding, as well as the docs for whatever language you fancy.
 
 ### /api is special
+Basically, you're going to add a script to the /api folder in a Vercel project.
+When you deploy, it will generate a Function as a Service endpoint at the file name's path.
 
-Generally, adding an approved script to the /api folder will create a Function as a Service
-endpoint at the file name's path. Nesting is allowed, as you can see with these examples.
-
+Nesting is allowed, as you can see with these examples.
 ```
 /api/hello.js -> https://<APP_URL>/api/hello
 /api/js/basic -> https://<APP_URL>/api/js/basic
 ```
 
-See the Documentation items for more details.
+
+(https://vercel.com/docs/serverless-functions/supported-languages)[Official Runtimes] include Ruby, Golang, Javascript, and Python.
+Definitely check out what formats your function must be in.
 
 ### List the Examples
 
@@ -39,6 +40,8 @@ See the Documentation items for more details.
 [Basic Example](functions.immdom.com/python/basic)
 
 [Params Example](functions.immdom.com/python/param) <-- this is different. it just prints a dict of params.
+
+[Requests Example](functions.immdom.com/python/git?username=paulkarayan) <-- lookup github user details with ?username=<insertMe>
 
 [Flask Example](https://functions.immdom.com/api?domain=google.com) <-- dns lookup on a domain.
 
